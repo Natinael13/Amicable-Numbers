@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="amicablestyle.css">
+    <title>Amicable Numbers</title>
+</head>
+<body>
+
+
+    <script language="javascript">
+
+        var factorsFinder = function(number){
+            var factors= []
+            var i;
+            for(i=1;i<number;i++){
+                if(number%i==0){
+                    factors.push(i)
+                }
+            }
+            return factors;
+        }
+
+        var arraySum = function(array){
+            var j = 0;
+            var i;
+            for(i=0;i<array.length;i++){
+                j = j + array[i];
+            }
+            return j;
+        }
+
+        window.onload= function(){
+        document.getElementById('button').onclick=
+            function(){
+                numberOne = document.getElementById('number 1').value;
+                numberTwo = document.getElementById('number 2').value;
+
+                var numberOneF = [];
+                var numberTwoF = [];
+                numberOneF = factorsFinder(numberOne);
+                numberTwoF = factorsFinder(numberTwo);
+
+                var numberOneS = arraySum(numberOneF);
+                var numberTwoS = arraySum(numberTwoF);
+                if(numberOneS==numberTwoS){
+                    result = "The numbers: " + numberOne + " and " + numberTwo +
+                    " are amicable";
+                }
+                else{
+                    result = "The numbers: " + numberOne + " and " + numberTwo +
+                    " are not amicable";
+                }
+                document.getElementById("result").innerHTML = result;
+                document.getElementById("Number 1 Factors").innerHTML = "Number 1 Factors: " + numberOneF;
+                document.getElementById("Number 2 Factors").innerHTML = "Number 2 Factors: " + numberTwoF;
+            }
+        }
+
+
+    </script>
+
+
+    <form>
+        <div>
+            <label>Number 1:</label>
+            <input type = "text" id="number 1" value = '0'>
+        </div>
+        <div>
+            <label>Number 2:</label>
+            <input type = "text" id="number 2" value = '0'>
+        </div>
+        <input type = "button" id="button" value = "show result">
+    </form>
+    <div id="result"></div>
+    <div id="Number 1 Factors"></div>
+    <div id="Number 2 Factors"></div>
+    
+
+</body>
+</html>
