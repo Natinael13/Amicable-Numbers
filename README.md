@@ -1,2 +1,10 @@
 # Factors-Sums-Equal
-Check if sums of two numbers factors are the same
+
+
+
+
+# What I Gained
+
+* Practice with using Javascript as a programming language
+* Practice with HTML
+* Practice with CSS
