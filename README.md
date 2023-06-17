@@ -1,6 +1,6 @@
-# Factors-Sums-Equal
+# Amicable-Numbers
 
-Created a webpage that checks if the sums of two numbers factors are the same. Following the user inputing 2 numbers and clicking "show results" the following is displayed: statement on if the two numbers are amicable(The sums of the two numbers factors are the same) or not and the two numbers factors. 
+Created a webpage that checks if two numbers are amicable. Following the user inputting 2 numbers and clicking "show results" the following is displayed: a statement on if the two numbers are amicable(In this case meaning "The sums of the two numbers' factors are the same") or not and the two numbers' factors. 
 
 
 # What I Gained
